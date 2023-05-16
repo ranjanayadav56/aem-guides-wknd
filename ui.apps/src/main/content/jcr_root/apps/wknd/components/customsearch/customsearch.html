@@ -1,0 +1,17 @@
+<sly>
+<div class="cmp-customsearch" data-sly-use.model="com.adobe.aem.guides.wknd.core.models.CustomSearch"
+    data-sly-use.templates="core/wcm/components/commons/v1/templates.html" >
+
+      <div class="cmp-customsearch__container" cmp-customsearch-tempPath="${model.tempFilterPath}" cmp-customsearch-path="${model.rootPath}" cmp-customsearch-limit="${model.pageSize}" >
+          
+          <input class="cmp-customsearch__container-input" id="search" type="text" placeholder="Start Searching . . ." name="searchText" value="" />
+          <button class="cmp-customsearch__container-btn" data-cmp-hook-customsearch="search"> <i class="fa-solid fa-magnifying-glass"></i> </button>
+        
+      </div >
+      <div class="cmp-customsearch__field__totalresults" id="searchResult">  </div>
+
+      <div class="cmp-customsearch__results">
+          
+      </div>
+  </div>
+</sly>
