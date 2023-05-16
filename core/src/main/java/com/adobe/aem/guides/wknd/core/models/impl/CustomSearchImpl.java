@@ -1,5 +1,6 @@
 package com.adobe.aem.guides.wknd.core.models.impl;
 
+import org.apache.commons.lang3.StringUtils;
 import org.apache.sling.api.SlingHttpServletRequest;
 import org.apache.sling.models.annotations.DefaultInjectionStrategy;
 import org.apache.sling.models.annotations.Model;
@@ -44,6 +45,12 @@ public class CustomSearchImpl implements CustomSearch {
     @Override
     public String getPageSize() {  
         return pageSize;
+    }
+
+    @Override
+    public boolean isEmpty() {
+        
+        return StringUtils.isBlank(tempFilterPath);
     }
     
 }

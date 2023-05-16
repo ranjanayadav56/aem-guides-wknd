@@ -11,13 +11,6 @@
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="granite/ui/components/coral/foundation/container">
                 <items jcr:primaryType="nt:unstructured">
-
-                     
-                     <!-- <searchContent
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
-                        fieldLabel="Search Text"
-                        name="./searchContent"/> -->
                     
                     <rootPath
                         jcr:primaryType="nt:unstructured"

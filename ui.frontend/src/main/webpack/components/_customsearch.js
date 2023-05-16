@@ -101,9 +101,6 @@ import $ from "jquery";
                         console.log('ajax error = ' + xhr.statusText);
                         },
                 });
-
-                // window.history.replaceState({}, "", "?query=" + fulltext);
-
                   
             }
 

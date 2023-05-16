@@ -1,27 +1,41 @@
 @import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css";
 
 .cmp-customsearch {
-      margin: 20px auto;
+      margin: 0px auto;
       width: 100%;
 
       &__container {
             display: flex;
             margin: 0px auto;
-            width: 70%;
+            width: 100%;
+
+            @include min-screen(md) {
+                  width: 85%;
+            }
+            
 
             &-input {
                   border: none;
                   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
                   outline: none;
                   padding: 10px 20px;
-                  width: 92%;
+                  width: 80%;
+
+                  @include min-screen(md) {
+                        width: 92%;
+                  }
+                  
             }
 
             &-btn {
                   background-color: rgb(16, 165, 116);
                   border: none;
                   padding: 15px 0;
-                  width: 8%;
+                  width: 20%;
+
+                  @include min-screen(md) {
+                        width: 8%;
+                  }
 
                   i{
                         font-size: 20px;

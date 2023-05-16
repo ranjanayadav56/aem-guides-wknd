@@ -7,5 +7,6 @@ public interface CustomSearch {
     public String getRootPath();
     public String getTempFilterPath(); 
     public String getPageSize();  
+    public boolean isEmpty();
     
 }

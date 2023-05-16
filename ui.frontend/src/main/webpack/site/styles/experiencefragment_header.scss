@@ -32,7 +32,10 @@ header.experiencefragment {
 
     .cmp-container {
         display: grid;
-        grid-template-columns: 4fr 1fr 1fr;
+
+        @include min-screen(md){
+            grid-template-columns: 4fr 1fr 1fr;
+        }
     }
 
     //== Navigation
@@ -61,6 +64,7 @@ header.experiencefragment {
     //== Language Navigation
 
     .cmp-languagenavigation {
+        padding: 10px;
         position: relative;
 
         &::before {
