@@ -29,6 +29,13 @@ import $ from "jquery";
 
                 
                   let fulltext = $(".cmp-customsearch__container-input").val();
+
+                  if (fulltext == null || fulltext == "") {
+                    fulltext = window.location.search.split("=")[1];
+                    $(".cmp-customsearch__container-input").val(fulltext);
+                }
+
+                if (fulltext != null && fulltext != "") {
                 
                   $.ajax({
                     url: "/content/wknd/us/en/home/jcr:content.myservlet.txt",
@@ -44,6 +51,9 @@ import $ from "jquery";
 
                         showTotalResults.innerHTML = `<p> ${numOfResults} Results found. </p>`;
                         displayResults.innerHTML = '';
+
+                        var resultElement = document.createElement("ul");
+                        resultElement.className = "cmp-customsearch__results__list";
 
 
                         var maxResults = Math.min(searchlimit, Results.length);
@@ -79,17 +89,15 @@ import $ from "jquery";
                           }
 
                           function createResultElement(data) {
-
-                            var resultElement = document.createElement("div");
-                            resultElement.className = "cmp-customsearch__results--div";
                           
-                            var resultHTML = `<ul class="cmp-customsearch__results--ul">
-                                                  <li class="cmp-customsearch__results--li">Title: ${data.title}</li>
-                                                  <li class="cmp-customsearch__results--li"> Path: <a href="${data.path}.html"> ${data.path}</a></li>
-                                                  <li class="cmp-customsearch__results--li">Description: ${data.description}</li>
-                                              </ul>`;
+                            var resultHTML = `<li class="cmp-customsearch__results__list__listItems">
+                                                  <p class="cmp-customsearch__results__list__listItems__title">Title: ${data.title}</p>
+                                                  <p class="cmp-customsearch__results__list__listItems__path"> Path: <a href="${data.path}.html"> ${data.path}</a></p>
+                                                  <p class="cmp-customsearch__results__list__listItems__description">Description: ${data.description}</p>
+                                              </li>`;
                           
-                            resultElement.innerHTML = resultHTML;
+                            resultElement.innerHTML += resultHTML;
+                            displayResults.appendChild(resultElement);
                           
                             return resultElement;
                           }
@@ -101,6 +109,8 @@ import $ from "jquery";
                         console.log('ajax error = ' + xhr.statusText);
                         },
                 });
+
+            } 
                   
             }
 

@@ -57,8 +57,25 @@
             padding: 10px;
             width: 70%;
 
-            &--ul {
+            &__list {
                   list-style: none;
+
+                  &__listItems {
+                        margin-bottom: 20px;
+                        
+                        &__title {
+                              margin: 0;
+
+                        }
+
+                        &__path {
+                              margin: 0;
+                        }
+
+                        &__description {
+                              margin: 0;
+                        }
+                  }
             }
             
       }
