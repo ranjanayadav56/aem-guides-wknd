@@ -1,0 +1,15 @@
+{
+      "version": "0.2.0",
+      "configurations": [
+            
+
+          {
+              "type": "java",
+              "name": "Debug (Attach)",
+              "projectName": "wknd.core",
+              "request": "attach",
+              "hostName": "localhost",
+              "port": 8080
+          }
+      ]
+  }
