@@ -84,14 +84,7 @@ public class CreatePageServlet extends SlingAllMethodsServlet {
                                     jcrNode = pageNode.addNode("jcr:content", "cq:PageContent");
                               }
                               jcrNode.setProperty("sling:resourceType", renderer);
-
-                              Node parNode = jcrNode.addNode("par");
-                              parNode.setProperty("sling:resourceType", "foundation/components/parsys");
-
-                              Node textNode = parNode.addNode("text");
-                              textNode.setProperty("sling:resourceType", "foundation/components/text");
-                              textNode.setProperty("textIsRich", "true");
-                              textNode.setProperty("text", "Test page");
+                              
 
                         }
                   } catch (Exception e) {
