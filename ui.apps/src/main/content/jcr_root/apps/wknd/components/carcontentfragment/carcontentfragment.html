@@ -1,0 +1,23 @@
+
+<sly data-sly-use.model="com.adobe.aem.guides.wknd.core.models.CarContentFragment"
+    data-sly-use.templates="core/wcm/components/commons/v1/templates.html">
+
+    <sly data-sly-test="${!model.isEmpty}">
+
+        <div class="cmp-carcontentfragment">
+            <p class="cmp-carcontentfragment-brand"> Brand Name : ${model.brandName} </p>
+            <p class="cmp-carcontentfragment-industry"> Industry Name : ${model.industryName}</p>
+
+            <div class="cmp-carcontentfragment__child">
+                <p class="cmp-carcontentfragment__child-color"> Color : ${model.color}</p>
+                <div class="cmp-carcontentfragment__child-image">
+                    <img src="${model.carImage}" alt="car Image">
+                </div>
+            </div>
+        </div>
+
+    </sly>
+
+</sly>
+
+<sly data-sly-call="${templates.placeholder @ isEmpty = model.isEmpty}"></sly>
