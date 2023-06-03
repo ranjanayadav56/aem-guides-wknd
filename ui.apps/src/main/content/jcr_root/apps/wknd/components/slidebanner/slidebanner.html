@@ -11,7 +11,7 @@
                 <!-- Right Side Content -->
 
                 <section class="cmp-slidebanner__container__right">
-                    <h1 class="cmp-slidebanner__container__right--title"> ${model.text} </h1>
+                    <h1 class="cmp-slidebanner__container__right--title" cmp-slidebanner-title="${model.text}" > ${model.text} </h1>
                     <div class="cmp-slidebanner__container__right--description"> ${model.description @ context='html'}
                     </div>
 
@@ -41,6 +41,7 @@
 
                 </section>
                 <div class="horizontal-line"></div>
+                <div class="horizontal-title"></div>
             </div>
 
         </sly>

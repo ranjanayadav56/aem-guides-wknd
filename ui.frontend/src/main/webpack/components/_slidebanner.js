@@ -1,12 +1,9 @@
+import $ from "jquery";
 import Swiper, { Navigation, Autoplay, Pagination } from 'swiper';
 
-
 const slider = document.querySelector('.swiper-wrapper');
-
-
 if (slider) {
-      const swiper = new Swiper('.swiper', {
-           
+      const swiper = new Swiper('.swiper', {      
             modules: [Navigation, Autoplay, Pagination],
             slidesPerView: 1,
             loop: true,
@@ -23,8 +20,12 @@ if (slider) {
             },
             autoplay: {
                   delay: 5000,
-            },
-            
+            }, 
       });
 }
+
+
+let horizontalTitle = $(".cmp-slidebanner__container__right--title").attr("cmp-slidebanner-title");
+
+$(".horizontal-title").text(horizontalTitle);
 

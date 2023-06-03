@@ -37,6 +37,23 @@
                   
             }
 
+            .horizontal-title {
+                  display: none;
+                  
+                  
+                  @include min-screen(lg) {
+                        display: block;
+                        font-size: 15px;
+                        font-weight: 900;
+                        width: 20px;
+                        line-height: 1.1;
+                        margin-top: 13%;
+                        margin-right: 10px;
+                        text-transform: uppercase;
+                        word-wrap: break-word;
+                  }
+            }
+
             
             &__left {
                   width: 100%;
