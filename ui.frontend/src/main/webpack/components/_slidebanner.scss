@@ -429,6 +429,15 @@
                         left: 990px;
                   }
             }
+
+            .horizontal-title {
+                  display: none;
+
+                  @include min-screen(lg) {
+                        display: block;
+                        margin-left: 10px;
+                  }
+            }
       }
 
       .cmp-slidebanner__container__right {
