@@ -22,7 +22,7 @@
                         height: 3px;
                         top: 105px;
                         left: 210px;
-                        background-color: #57d857;
+                        background-color: $green-line;
                   }
 
                   @include min-screen(xl) {
@@ -300,7 +300,7 @@
                         }
 
                         .swiper-button-prev {
-                              background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAYUAAACBCAMAAAAYG1bYAAAAbFBMVEX///8AAAB/f3+kpKQQEBDR0dH39/fY2Njt7e3q6ur7+/tRUVFiYmIzMzOfn5+amprExMSOjo7i4uKzs7N5eXnKysooKCi7u7tubm5nZ2cuLi4jIyMVFRWHh4dKSkoJCQlBQUEbGxusrKxERESzrONQAAADG0lEQVR4nO3dj1LaQBCAcQ5MAKtoKVS0tlj6/u/YPw5qkkvuLrndvQ7f7wGcDN90tpLbczbLbZn9JyLZwlk/AWYHd2X9CBdvdeuoYG3vHBWsbRwVzD06KlhbPzkqWNs7RwVrd44K5m4cFaytvzoqWLt3jgrWPjsqWLu+cVSwtv7WjkAFdfedBlRQ1x4JVNB3/ckXgQqqts/eCFTQ9OBvQAVN3/siUEFNz0iggqa+kUAFRb0jgQp6+kcCFbTUP4YjUEHB9hiIQAV5X0INqCBvF45ABWHBkUAFecvgSKCCuFNUAyqIihkJVJBVv8RGoIKYZXQDKoiJHQlUEHRIiUAFEfVtUgQqSKjSGlBBwiY1AhXySxsJVJCwegp/6FQQtg9/5FSQlj4SqJBd50g8FdQ1t6SoYMJ3JJ4Kyu7CH3av4wJpNmtfg+6WFERVngjjRwLG8VSYMBIwTreCd0sKotoVGAkWWhW2P60f6CI1KwwfiYeURgVGgpGPFQa2pCDqvcL2yvpZLtdbhYgj8ZByrhDYkoKo1wo1I8HUvwrhLSmIqhgJBagSD6FCwt9/C1Ne6SCHiu+yC/D6fyTP7XdQdP59gS+0Lb397sxwMPT+PdK445DI4cN3qqOOBiOHxvuFR+unuVTNd20jzwdjotZ75+T1KeTQPoOxSlwlRA7d80gjdqgwkeds3sL6mS6P75wqw0GbrwLDQZu3wrThcJwjzW7rrzDl1c9zz49EupS7eJrYqMoo4V4qKgiKvqONCpLGDQcqZDZqOFAht7h7bKkgbU6FEiSf3KOChNRTrFQQkTgcqCAkabuBClJSlj+pIGbwb4NRQUv8ug8VJMUOByqIihwOVJAVd0sGFYQN/RFVKuiJuCqDCvLC21dUUBAcDlRQEdi+ooKO4e0rKigZHA5U0DJ05SoV9PQPByoo6h0OVNDUt5pLBVU9q7lUUOY9YE8Fbb7VXCqo82xfUUFfd/uKChba9zZQwcSGCiWoqFCCxnCggpkDFUpwokIJKiqU4LyaSwVbOyqU4ESFEiypUIL6FxVKMHfWT4A/Hqwf4D/0GxEHTMH1h23AAAAAAElFTkSuQmCC');
+                              background-image: url('/etc.clientlibs/wknd/clientlibs/clientlib-site/resources/images/leftArrow.png');
                               background-repeat: no-repeat;
                               background-size: 100% auto;
                               background-position: center;
@@ -329,7 +329,7 @@
                         }
 
                         .swiper-button-next {
-                              background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAYUAAACBCAMAAAAYG1bYAAAAb1BMVEX///8AAACbm5t6enq5ubldXV329vb5+fmzs7OTk5NaWlrb29uwsLDw8PCtra3t7e0YGBgKCgri4uIjIyOGhoZNTU0bGxvNzc00NDSioqJzc3NkZGRVVVWIiIjV1dVJSUlBQUEtLS13d3fCwsI6OjpeHpgvAAADUUlEQVR4nO3di1LbMBBG4SyBkqYlhEsoBUq49P2fsSUthNiyYwmtfg863wMwmjkzXXC98mSCWOdf1CfAZDI7O1cfAZNDs0P1GfC3gn1VH6J6LxXsluGgtalg19/U56jbvwoMB63XCgwHpbcKNmc4yGwr2AXDQeVdBbOZ+jS12qlgl+rjVGq3gt0xHBQaFWzJcBBoVjD7rj5ShdoVGA7lBSrY6kR9qtqEKtjVvfpYlQlWMFuoz1WXjgp2eaw+WU26KtjqVH20inRWsOUP9dnq0V3B7Kf6cNXoq2BT9elq0VvBHhgORfRXsDOGQwl7KjAcithbwW7UR6zA/gp2zXDwNqCCGcPB2aAKDAdnwyrYDY+VPA2sYL95wd7R0Ap29qw+6ic2uILZgfqsn1dEBYaDm5gKds1w8BFVwYzh4CKyAi/Yu4itYLcMh/yiK9gjwyG7+ApsX+WXUoHhkFtSBZszHLJKq2AXDIecEiswHLJKrsBwyCi9gs27XrCfHSDOTXoFe+zYvrr7wM9EvPD21ZH6WLX5RYUxWAVWc6lQ3EV7+4oKAq3tKyooNFdzqSDRGA5U0FjeU2EMFlQYgykVxmB9QoUReBsOVJBaUGEMpsdUGIH1KRXG4JgKcpvLM6igtfkHiQpal/yOpLfg7wW57RM9KshsH2BQQeb9//RQQWTnlRgqSDS+3EAFheZF9VQQaL0ZRoXy2h8woUJpoY/5UKGw4IeteGe7rPAmycHTFFHmH4nAVlUmz+kNupZIEC19o4oP4eaTXIHlwoxSKzASckqrwNJ5XkkVjriAIa+UCoyE3BIqMBKyi67ADYYOYitwYZuHyArcbOsirgIXefqIqcCN514iKnDBs5vhFfgShp+hFfhkmKeBFfh8nqthFZ7Ux/zkBlVgJDgbUoGR4G1/hYeuqyKRzd4KjIQC9lVgJJTQX2HZvhQPDnorrBkJZfRVaN6HBy89FVp3Q8JLZ4UrRkI5XRVWPDgqqKMCI6GocIXwXfLwEqrASCgtUCF0jTxctSswEsprVWgvzsJdo0JocRbudis071JAGTsVgl/Zgb/3FRgJKtsKbEnpvFU4YiTovFZgS0rpfwW2pKQ2FdiSEnupwF0KaodsSY3AjC2pEbjPPhL+AFp5TrJfjKFXAAAAAElFTkSuQmCC');
+                              background-image: url('/etc.clientlibs/wknd/clientlibs/clientlib-site/resources/images/rightArrow.png');
                               background-repeat: no-repeat;
                               background-size: 100% auto;
                               background-position: center;
@@ -369,8 +369,8 @@
 .cmp-red-theme {
 
       .horizontal-line {
-            color: #007aff;
-            background-color: #007aff;
+            color: $blue-line;
+            background-color: $blue-line;
       }
 
       .cmp-slidebanner__container__left {
