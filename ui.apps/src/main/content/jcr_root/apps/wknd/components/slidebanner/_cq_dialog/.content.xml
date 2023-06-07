@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Properties"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+        <items jcr:primaryType="nt:unstructured">
+            <column
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/container">
+                <items jcr:primaryType="nt:unstructured">
+                    
+                    <text
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldLabel="Title"
+                        name="./text"/>
+
+                    <description
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="cq/gui/components/authoring/dialog/richtext"
+                        fieldDescription="Sets the description that appears on the profiled person's page."
+                        fieldLabel="Description"
+                        required="true"
+                        useFixedInlineToolbar="{Boolean}true"
+                        name="./description">
+                        <rtePlugins jcr:primaryType="nt:unstructured">
+                            <format
+                                jcr:primaryType="nt:unstructured"
+                                features="[bold,italic]"/>
+                            <justify
+                                jcr:primaryType="nt:unstructured"
+                                features="[]"/>
+                            <lists
+                                jcr:primaryType="nt:unstructured"
+                                features="[]"/>
+                        </rtePlugins>
+                    </description>
+
+                    <CTAs
+                        sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                        fieldDescription="Click '+' to add a new link"
+                        fieldLabel="CTAs"
+                        jcr:primaryType="nt:unstructured"
+                        composite="{Boolean}true">
+                        <field sling:resourceType="granite/ui/components/coral/foundation/container"
+                                jcr:primaryType="nt:unstructured" name="./CTAs">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <linkText
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldLabel="CTA Text"
+                                        jcr:primaryType="nt:unstructured"
+                                        name="./linkText" />
+                                    <linkUrl
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+                                        fieldLabel="CTA link"
+                                        jcr:primaryType="nt:unstructured"
+                                        rootPath="/content/"
+                                        name="./linkUrl" />
+                                    <target
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/foundation/form/checkbox"
+                                        text="Target"
+                                        value="false"
+                                        name="./target"/>
+                                </items>
+                        </field>
+                    </CTAs>
+
+                    <slide
+                        sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                        fieldDescription="Click '+' to add a new link"
+                        fieldLabel="Slide"
+                        jcr:primaryType="nt:unstructured"
+                        composite="{Boolean}true">
+                        <field sling:resourceType="granite/ui/components/coral/foundation/container"
+                                jcr:primaryType="nt:unstructured" name="./slide">
+                            <items jcr:primaryType="nt:unstructured">
+                                <image
+                                    sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+                                    fieldLabel="Image"
+                                    jcr:primaryType="nt:unstructured"
+                                    rootPath="/content/"
+                                    name="./image" />
+                                <imageText
+                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                    fieldLabel="Text"
+                                    jcr:primaryType="nt:unstructured"
+                                    name="./imageText" />
+                            </items>
+                        </field>
+                    </slide>
+
+                </items>
+            </column>
+        </items>
+    </content>
+</jcr:root>

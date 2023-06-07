@@ -1,6 +1,13 @@
 
-@import 'variables';
-@import 'base';
+
+@import "swiper/scss";
+@import "swiper/scss/navigation";
+@import "swiper/scss/autoplay";
+@import "swiper/scss/pagination";
+
+
+@import "variables";
 @import "./styles/mixin";
-@import '../components/**/*.scss';
-@import './styles/*.scss';
+@import "base";
+@import "../components/**/*.scss";
+@import "./styles/*.scss";

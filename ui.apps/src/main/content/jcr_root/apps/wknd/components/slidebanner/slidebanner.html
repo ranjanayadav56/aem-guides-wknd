@@ -1,0 +1,51 @@
+<sly>
+    <div class="cmp-slidebanner" data-sly-use.model="com.adobe.aem.guides.wknd.core.models.SlideBanner"
+        data-sly-use.templates="core/wcm/components/commons/v1/templates.html">
+
+        <sly data-sly-test="${!model.isEmpty}">
+
+            <div class="cmp-slidebanner__container">
+
+                <section class="cmp-slidebanner__container__left"></section>
+
+                <!-- Right Side Content -->
+
+                <section class="cmp-slidebanner__container__right">
+                    <h1 class="cmp-slidebanner__container__right--title" cmp-slidebanner-title="${model.text}" > ${model.text} </h1>
+                    <div class="cmp-slidebanner__container__right--description"> ${model.description @ context='html'}
+                    </div>
+
+                    <div class="cmp-slidebanner__container__right__btn" data-sly-list.item="${model.ctAsData}">
+                        <a class="cmp-slidebanner--contactBtn ${itemList.last ? 'lastBtn':''}" href="${item.linkUrl}.html"
+                            target="${item.target ? '_blank' : '_self' }"> ${item.linkText} </a>
+                    </div>
+                </section>
+
+                <!-- slider  -->
+
+                <section class="cmp-slidebanner__container__slider">
+
+                    <div class="swiper">
+                        <div class="swiper-wrapper" data-sly-list.item="${model.slideData}" >
+                            <div class="swiper-slide" >
+                                <img src="${item.image}" alt="images" />
+                                <p class="slide-text"> ${item.imageText} </p>
+                            </div>
+                        </div>
+
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+
+                        <div class="swiper-pagination swiper-pagination-clickable"></div>
+                    </div>
+
+                </section>
+                <div class="horizontal-line"></div>
+                <div class="horizontal-title"></div>
+            </div>
+
+        </sly>
+    </div>
+</sly>
+
+<sly data-sly-call="${templates.placeholder @ isEmpty = model.isEmpty}"></sly>
