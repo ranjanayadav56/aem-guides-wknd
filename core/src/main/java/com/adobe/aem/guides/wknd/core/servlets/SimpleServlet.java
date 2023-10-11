@@ -40,6 +40,7 @@ import java.io.IOException;
 @SlingServletResourceTypes(
         resourceTypes="wknd/components/page",
         methods=HttpConstants.METHOD_GET,
+        selectors = {"testServlet"},
         extensions="txt")
 @ServiceDescription("Simple Demo Servlet")
 public class SimpleServlet extends SlingSafeMethodsServlet {
@@ -54,3 +55,6 @@ public class SimpleServlet extends SlingSafeMethodsServlet {
         resp.getWriter().write("Title = " + resource.getValueMap().get(JcrConstants.JCR_TITLE));
     }
 }
+
+
+// this will hit on "http://localhost:4502/content/wknd/us/en/service/_jcr_content.testServlet.txt" this url.
