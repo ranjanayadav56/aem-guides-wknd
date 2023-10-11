@@ -32,8 +32,6 @@ import com.day.cq.wcm.api.PageManager;
 
 public class CreatePageServlet extends SlingAllMethodsServlet {
 
-      // private static final long serialVersionUID = -1315366566565122983L;
-
       @Reference
       ConfigTest configTest;
 
@@ -97,3 +95,6 @@ public class CreatePageServlet extends SlingAllMethodsServlet {
 
       }
 }
+
+
+// this servlet will hit on "http://localhost:4502/bin/createpage" url
